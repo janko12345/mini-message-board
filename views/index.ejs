@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="text-center container-sm">
+    <header class="mb-5">
+      <h1 class="display-4"><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+      <p><a href="/new">Create new message</a></p>
+    </header>
+    <% for(elem of messages){ %>
+    <% for(const key in elem){ %>
+    <p class="lead"><%= elem[key] %> </p>
+    <% } %>
+    <br>
+    <% } %>
+  </div>
+
+</body>
+
+</html>
